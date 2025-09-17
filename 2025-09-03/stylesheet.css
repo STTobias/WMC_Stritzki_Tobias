@@ -4,10 +4,10 @@ header {
     margin: 0;
 }
 
-header{
-  background:dodgerblue;
-  color:#fff;
-  padding: .8rem 1rem;
+header {
+    background: dodgerblue;
+    color: #fff;
+    padding: .8rem 1rem;
 }
 
 header nav ul {
@@ -27,17 +27,17 @@ nav a {
 }
 
 nav a:hover {
-    background-color: darkturquoise;
-    padding: 1em; 
+    background-color: black;
+    padding: 10px;
 }
 
 body {
-    margin: 0;   
+    margin: 0;
 }
 
 main {
-    max-width: 900px; 
-    margin: 1.5rem auto; 
+    max-width: 900px;
+    margin: 1.5rem auto;
     padding: 0 1rem;
 }
 
@@ -45,8 +45,9 @@ section {
     margin-block: 2rem;
 }
 
-h1,h2 {
-    line-height:1.2; 
+h1,
+h2 {
+    line-height: 1.2;
     margin: 0 0 .6rem;
 }
 
