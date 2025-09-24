@@ -1,7 +1,25 @@
+body {
+    margin: 0;
+}
+
 header {
-    background: dodgerblue;
-    color: #fff;
-    padding: .8rem 1rem;
+    background: linear-gradient(to top, black 2%, transparent);
+    padding: 1rem;
+    padding-top: 5em;
+    margin-top: 0;
+    color: white;
+    position: relative;
+}
+
+#name-size {
+    font-size: 3em;
+}
+
+.header-img {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
 }
 
 header nav ul {
@@ -22,26 +40,24 @@ nav a {
     transition: background-color 0.3s;
 }
 
-nav a:hover {
-    background-color: black;
-    padding: 10px;
-}
-
 main {
     max-width: 900px;
     margin: auto;
     padding: 0 1rem;
+    text-align: center;
 }
 
 section {
     margin-block: 2rem;
 }
 
+.profil-ul {
+    list-style: none;
+}
+
 h1,
 h2 {
     border: 20px;
-    border-color: black;
-    /* ES klappt bei mir irgendwie nicht*/
     padding: 20px;
     text-align: center;
 }
