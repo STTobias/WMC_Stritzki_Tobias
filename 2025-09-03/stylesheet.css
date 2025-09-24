@@ -5,11 +5,13 @@ header {
 }
 
 header nav ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 2em;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -27,7 +29,7 @@ nav a:hover {
 
 main {
     max-width: 900px;
-    margin: 1.5rem;
+    margin: auto;
     padding: 0 1rem;
 }
 
@@ -41,6 +43,7 @@ h2 {
     border-color: black;
     /* ES klappt bei mir irgendwie nicht*/
     padding: 20px;
+    text-align: center;
 }
 
 p {
