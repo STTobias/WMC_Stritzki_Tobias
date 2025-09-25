@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
 }
@@ -5,7 +9,7 @@ body {
 header {
     background: linear-gradient(to top, black 2%, transparent);
     padding: 1rem;
-    padding-top: 5em;
+    padding-top: 3em;
     margin-top: 0;
     color: white;
     position: relative;
