@@ -6,24 +6,28 @@ body {
     margin: 0;
 }
 
+nav {
+    position: absolute;
+    width: 100%;
+    /* background-image: linear-gradient(to right, #4caf50, #81c784); */
+    background-color: #0008;
+    padding: 2em;
+    bottom: 0px;
+    justify-content: center;
+}
+
 header {
-    background: linear-gradient(to top, black 2%, transparent);
+    background-image: url("csm_Alpen_Header_13867052a6.jpg");
     padding: 1rem;
-    padding-top: 3em;
     margin-top: 0;
     color: white;
     position: relative;
+    height: 300px;
+    padding-bottom: 0px;
 }
 
 #name-size {
     font-size: 3em;
-}
-
-.header-img {
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-
 }
 
 header nav ul {
@@ -59,8 +63,11 @@ section {
     list-style: none;
 }
 
-h1,
-h2 {
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     border: 20px;
     padding: 20px;
     text-align: center;
