@@ -18,15 +18,15 @@ nav {
 
 header {
     background-image: url("csm_Alpen_Header_13867052a6.jpg");
-    padding: 1rem;
     margin-top: 0;
     color: white;
     position: relative;
-    height: 300px;
+    height: 480px;
     padding-bottom: 0px;
 }
 
 #name-size {
+    margin-top: 2em;
     font-size: 3em;
 }
 
