@@ -1,0 +1,193 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 50%, rgba(254, 254, 254, 1) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    background-image: url("/pictures/csm_Alpen_Header_13867052a6.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    height: 460px;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+#name-size {
+    margin-top: 2em;
+    font-size: 3em;
+}
+
+
+nav {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2em 0;
+    bottom: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+main {
+    padding: 20px;
+}
+
+.cards-bereich {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+.info-card {
+    width: 360px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.card-bild {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-bild img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.info-card:hover .card-bild img {
+    transform: scale(1.1);
+}
+
+
+.card-inhalt {
+    padding: 20px;
+}
+
+.card-kategorie {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.card-inhalt h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 15px 0;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.tag {
+    font-size: 11px;
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+
+.profil-liste {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.profil-liste li {
+    font-size: 14px;
+    color: #666;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.profil-liste strong {
+    color: #333;
+}
+
+
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer h2 {
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #666;
+}

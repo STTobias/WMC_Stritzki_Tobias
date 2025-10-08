@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles/stylesheet.css">
     <title>Homepage</title>
 </head>
 
 <body>
-
     <header>
         <h1 id="name-size">Tobias Stritzki</h1>
         <nav>
@@ -20,45 +19,97 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <section>
-            <h2 id="home">Home</h2>
-            <p>
-                Schön, dass du hier bist! Diese Seite habe ich erstellt, um mich selbst vorzustellen und
-                ein bisschen zu zeigen, was ich mit HTML & Co. schon kann. <br>
-                Hier findest du Infos über mich, meine Interessen und ein paar Projekte.
-            </p>
-        </section>
-        <section>
-            <h2 id="ueber-mich">Über mich</h2>
-            <details>
-                <summary>
-                    Ich Interessiere mich für Programmieren und...
-                </summary>
-                <p>
-                    ... die kreative Gestaltung von Webseiten.
-                    Dabei macht es mir besonders Spaß, eigene Ideen mit HTML, CSS und JavaScript umzusetzen. <br>
-                    Neben dem Programmieren beschäftige ich mich auch gerne mit Themen wie Gaming, Technik und Finanzen,
-                    weil ich es spannend finde, immer Neues zu lernen und auszuprobieren.
-                </p>
-            </details>
-        </section>
-        <section>
-            <h2 id="profil">Profil</h2>
-            <ul class="profil-ul">
-                <li><strong>Name:</strong> Tobias Stritzki</li>
-                <li><strong>Alter:</strong> 20 Jahre</li>
-                <li><strong>Wohnort:</strong> Wien, Österreich</li>
-                <li><strong>Gaming-Name:</strong> _CodeBlack_</li>
-                <li><strong>Besondere Fähigkeiten:</strong> HTML, CSS, JavaScript, Trading-Grundwissen</li>
-            </ul>
-        </section>
+        <div class="cards-bereich">
+
+            <!-- Home Card -->
+            <div class="info-card" id="home">
+                <div class="card-bild">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=srgb&fm=jpg&q=85"
+                        alt="Coding">
+                </div>
+                <div class="card-inhalt">
+                    <p class="card-kategorie">WILLKOMMEN</p>
+                    <h2>Home</h2>
+                    <p class="card-text">
+                        Schön, dass du hier bist! Diese Seite habe ich erstellt, um mich selbst vorzustellen und
+                        ein bisschen zu zeigen, was ich mit HTML & Co. schon kann.
+                        Hier findest du Infos über mich, meine Interessen und ein paar Projekte.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Über mich Card -->
+            <div class="info-card" id="ueber-mich">
+                <div class="card-bild">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=srgb&fm=jpg&q=85"
+                        alt="Programming">
+                </div>
+                <div class="card-inhalt">
+                    <p class="card-kategorie">INTERESSEN</p>
+                    <h2>Über mich</h2>
+                    <p class="card-text">
+                        Ich interessiere mich für Programmieren und die kreative Gestaltung von Webseiten.
+                        Dabei macht es mir besonders Spaß, eigene Ideen mit HTML, CSS und JavaScript umzusetzen.
+                        Neben dem Programmieren beschäftige ich mich auch gerne mit Themen wie Gaming, Technik und
+                        Finanzen.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Web Development</span>
+                        <span class="tag">Gaming</span>
+                        <span class="tag">Trading</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Card -->
+            <div class="info-card" id="skills">
+                <div class="card-bild">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=srgb&fm=jpg&q=85"
+                        alt="Skills">
+                </div>
+                <div class="card-inhalt">
+                    <p class="card-kategorie">FÄHIGKEITEN</p>
+                    <h2>Skills</h2>
+                    <p class="card-text">
+                        Ich hoffe man erkennt daran das ich mich mit HTML & CSS schon ganz gut auskenne.
+                        JavaScript ist noch etwas neu für mich, aber ich lerne schnell und habe schon einige
+                        coole Sachen damit gemacht.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil Card -->
+            <div class="info-card" id="profil">
+                <div class="card-bild">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=srgb&fm=jpg&q=85"
+                        alt="Profile">
+                </div>
+                <div class="card-inhalt">
+                    <p class="card-kategorie">PERSÖNLICHE DATEN</p>
+                    <h2>Profil</h2>
+                    <ul class="profil-liste">
+                        <li><strong>Name:</strong> Tobias Stritzki</li>
+                        <li><strong>Alter:</strong> 20 Jahre</li>
+                        <li><strong>Wohnort:</strong> Wien, Österreich</li>
+                        <li><strong>Gaming-Name:</strong> _CodeBlack_</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </main>
     <footer>
         <section>
             <h2>Kontakt</h2>
-            <p>📧 Email: <a href="mailto:str240648@spengergasse.at"> str240648@spengergasse.at</a></p>
+            <p>📧 Email: <a href="mailto:str240648@spengergasse.at">str240648@spengergasse.at</a></p>
             <p>💼 Github: <a href="https://github.com/STTobias">STTobias</a></p>
         </section>
     </footer>
