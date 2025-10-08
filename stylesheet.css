@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 nav {
@@ -11,7 +12,8 @@ nav {
     width: 100%;
     /* background-image: linear-gradient(to right, #4caf50, #81c784); */
     background-color: #0008;
-    padding: 2em;
+    padding-bottom: 2em;
+    padding-top: 2em;
     bottom: 0px;
     justify-content: center;
 }
@@ -21,7 +23,7 @@ header {
     margin-top: 0;
     color: white;
     position: relative;
-    height: 480px;
+    height: 460px;
     padding-bottom: 0px;
 }
 
