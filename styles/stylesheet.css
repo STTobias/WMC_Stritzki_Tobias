@@ -1,84 +1,124 @@
+/* === GRUNDLEGENDES === */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(135deg, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 50%, rgba(209, 209, 209, 1) 50%, rgba(254, 254, 254, 1) 100%);
+    background: linear-gradient(135deg, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 50%, #fefefe 100%);
     background-attachment: fixed;
     min-height: 100vh;
     margin: 0;
-    overflow-x: hidden;
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* === HEADER === */
 header {
-    background-image: url("/pictures/csm_Alpen_Header_13867052a6.jpg");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    position: relative;
-    height: 460px;
-}
-
-h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
+    max-width: 1200px;
+    margin: 60px auto 0;
+    padding: 40px 20px;
     text-align: center;
-    margin: 0;
 }
 
-#name-size {
-    margin-top: 2em;
+header h1 {
     font-size: 3em;
+    margin: 0 0 10px 0;
+    color: #333;
 }
 
+.subtitle {
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+}
 
+/* === NAVIGATION === */
 nav {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2em 0;
-    bottom: 0;
-}
-
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 2em;
-    justify-content: space-around;
+    gap: 15px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 nav a {
     text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+nav a:hover {
+    background-color: #333;
     color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
+    transform: translateY(-2px);
 }
 
+/* === MAIN & CARDS === */
 main {
-    padding: 20px;
-}
-
-.cards-bereich {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto;
+    padding: 20px;
 }
 
+/* Flip Card Setup */
+.flip-checkbox {
+    display: none;
+}
 
-.info-card {
+.flip-card {
     width: 360px;
+    height: 480px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-checkbox:checked + .flip-card .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-hint {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.card {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -86,63 +126,70 @@ main {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.info-card:hover {
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-
-.card-bild {
-    height: 200px;
-    overflow: hidden;
+/* Header als Card */
+header.card {
+    width: auto;
+    padding: 40px;
 }
 
-.card-bild img {
+/* Card Bilder */
+.card-front img,
+.card-back img {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
-    transition: transform 0.5s;
+    display: block;
 }
 
-.info-card:hover .card-bild img {
-    transform: scale(1.1);
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
 }
 
-
-.card-inhalt {
+/* Card Content */
+.content {
     padding: 20px;
 }
 
-.card-kategorie {
+.label {
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
     color: #888;
+    display: block;
     margin-bottom: 10px;
 }
 
-.card-inhalt h2 {
+.content h2 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
     margin: 0 0 15px 0;
 }
 
-.card-text {
+.content p {
     font-size: 14px;
     color: #666;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
 }
 
-.card-tags {
+/* === TAGS === */
+.tags {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
     margin-top: 15px;
 }
 
-.tag {
+.tags span {
     font-size: 11px;
     background-color: #f0f0f0;
     color: #666;
@@ -151,25 +198,52 @@ main {
     font-weight: 500;
 }
 
-
-.profil-liste {
+/* === PROFIL LISTE === */
+.content ul {
     list-style: none;
     padding: 0;
     margin: 15px 0;
 }
 
-.profil-liste li {
+.content ul li {
     font-size: 14px;
     color: #666;
     margin: 8px 0;
     line-height: 1.6;
 }
 
-.profil-liste strong {
+.content ul strong {
     color: #333;
 }
 
+/* === ZERTIFIKAT CARD === */
+.cert-front {
+    position: relative;
+}
 
+.cert-front img {
+    height: 100% !important;
+    object-fit: contain;
+    padding: 10px;
+    background: white;
+}
+
+.cert-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 15px 20px;
+}
+
+.cert-overlay .flip-hint {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* === FOOTER === */
 footer {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
@@ -179,15 +253,131 @@ footer {
 }
 
 footer h2 {
-    margin-bottom: 15px;
+    margin: 0 0 15px 0;
+    color: #333;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #666;
 }
 
 footer a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 footer a:hover {
     color: #666;
+}
+
+/* === TIMELINE SECTION === */
+.timeline-section {
+    max-width: 900px;
+    margin: 80px auto 50px;
+    padding: 0 20px;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #666 0%, #999 100%);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: calc(50% - 20px);
+    clear: both;
+}
+
+.timeline-item.left {
+    float: left;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.timeline-item.right {
+    float: right;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #ddd;
+    z-index: 1;
+}
+
+.timeline-item.left .timeline-dot {
+    right: -50px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -50px;
+}
+
+.timeline-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+    color: #888;
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.timeline-content h4 {
+    color: #333;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.timeline-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
 }

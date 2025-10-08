@@ -5,113 +5,280 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/stylesheet.css">
-    <title>Homepage</title>
+    <title>Tobias Stritzki - Homepage</title>
 </head>
 
 <body>
-    <header>
-        <h1 id="name-size">Tobias Stritzki</h1>
+    <header class="card">
+        <h1>Tobias Stritzki</h1>
+        <p class="subtitle">Web Developer • Gamer • Tech Enthusiast</p>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#ueber-mich">Über mich</a></li>
-                <li><a href="#profil">Profil</a></li>
-            </ul>
+            <a href="#home">Home</a>
+            <a href="#ueber-mich">Über mich</a>
+            <a href="#skills">Skills</a>
+            <a href="#profil">Profil</a>
         </nav>
     </header>
+    
     <main>
-        <div class="cards-bereich">
-
-            <!-- Home Card -->
-            <div class="info-card" id="home">
-                <div class="card-bild">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=srgb&fm=jpg&q=85"
-                        alt="Coding">
+        <!-- Home Card -->
+        <input type="checkbox" id="flip-home" class="flip-checkbox">
+        <label for="flip-home" class="card flip-card" id="home">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Coding">
+                    <div class="content">
+                        <span class="label">WILLKOMMEN</span>
+                        <h2>Home</h2>
+                        <p>
+                            Schön, dass du hier bist! Diese Seite habe ich erstellt, um mich selbst vorzustellen und
+                            ein bisschen zu zeigen, was ich mit HTML & Co. schon kann.
+                        </p>
+                        <span class="flip-hint">🔄 Klick zum Umdrehen</span>
+                    </div>
                 </div>
-                <div class="card-inhalt">
-                    <p class="card-kategorie">WILLKOMMEN</p>
-                    <h2>Home</h2>
-                    <p class="card-text">
-                        Schön, dass du hier bist! Diese Seite habe ich erstellt, um mich selbst vorzustellen und
-                        ein bisschen zu zeigen, was ich mit HTML & Co. schon kann.
-                        Hier findest du Infos über mich, meine Interessen und ein paar Projekte.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Über mich Card -->
-            <div class="info-card" id="ueber-mich">
-                <div class="card-bild">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=srgb&fm=jpg&q=85"
-                        alt="Programming">
-                </div>
-                <div class="card-inhalt">
-                    <p class="card-kategorie">INTERESSEN</p>
-                    <h2>Über mich</h2>
-                    <p class="card-text">
-                        Ich interessiere mich für Programmieren und die kreative Gestaltung von Webseiten.
-                        Dabei macht es mir besonders Spaß, eigene Ideen mit HTML, CSS und JavaScript umzusetzen.
-                        Neben dem Programmieren beschäftige ich mich auch gerne mit Themen wie Gaming, Technik und
-                        Finanzen.
-                    </p>
-                    <div class="card-tags">
-                        <span class="tag">Web Development</span>
-                        <span class="tag">Gaming</span>
-                        <span class="tag">Trading</span>
+                <div class="card-back">
+                    <div class="content">
+                        <span class="label">MEHR DETAILS</span>
+                        <h2>Willkommen!</h2>
+                        <p>
+                            Hier findest du Infos über mich, meine Interessen und ein paar Projekte.
+                            Ich arbeite ständig daran, meine Skills zu verbessern und neue Technologien zu lernen.
+                        </p>
+                        <p style="margin-top: 20px; font-style: italic; color: #888;">
+                            "Code is like humor. When you have to explain it, it's bad." - Cory House
+                        </p>
+                        <span class="flip-hint">🔄 Zurück</span>
                     </div>
                 </div>
             </div>
+        </label>
 
-            <!-- Skills Card -->
-            <div class="info-card" id="skills">
-                <div class="card-bild">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=srgb&fm=jpg&q=85"
-                        alt="Skills">
+        <!-- Über mich Card -->
+        <input type="checkbox" id="flip-about" class="flip-checkbox">
+        <label for="flip-about" class="card flip-card" id="ueber-mich">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Programming">
+                    <div class="content">
+                        <span class="label">INTERESSEN</span>
+                        <h2>Über mich</h2>
+                        <p>
+                            Ich interessiere mich für Programmieren und die kreative Gestaltung von Webseiten.
+                            Dabei macht es mir besonders Spaß, eigene Ideen mit HTML, CSS und JavaScript umzusetzen.
+                        </p>
+                        <div class="tags">
+                            <span>Web Development</span>
+                            <span>Gaming</span>
+                            <span>Trading</span>
+                        </div>
+                        <span class="flip-hint">🔄 Klick zum Umdrehen</span>
+                    </div>
                 </div>
-                <div class="card-inhalt">
-                    <p class="card-kategorie">FÄHIGKEITEN</p>
-                    <h2>Skills</h2>
-                    <p class="card-text">
-                        Ich hoffe man erkennt daran das ich mich mit HTML & CSS schon ganz gut auskenne.
-                        JavaScript ist noch etwas neu für mich, aber ich lerne schnell und habe schon einige
-                        coole Sachen damit gemacht.
-                    </p>
-                    <div class="card-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">SQL</span>
+                <div class="card-back">
+                    <div class="content">
+                        <span class="label">MEHR ÜBER MICH</span>
+                        <h2>Meine Leidenschaft</h2>
+                        <p>
+                            Neben dem Programmieren beschäftige ich mich auch gerne mit Themen wie Gaming, Technik und Finanzen.
+                        </p>
+                        <p>
+                            <strong>Gaming:</strong> Als _CodeBlack_ bin ich in verschiedenen Communities aktiv.
+                        </p>
+                        <p>
+                            <strong>Trading:</strong> Ich interessiere mich für Märkte und Investmentstrategien.
+                        </p>
+                        <span class="flip-hint">🔄 Zurück</span>
                     </div>
                 </div>
             </div>
+        </label>
 
-            <!-- Profil Card -->
-            <div class="info-card" id="profil">
-                <div class="card-bild">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=srgb&fm=jpg&q=85"
-                        alt="Profile">
+        <!-- Skills Card -->
+        <input type="checkbox" id="flip-skills" class="flip-checkbox">
+        <label for="flip-skills" class="card flip-card" id="skills">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Skills">
+                    <div class="content">
+                        <span class="label">FÄHIGKEITEN</span>
+                        <h2>Skills</h2>
+                        <p>
+                            Ich hoffe man erkennt daran das ich mich mit HTML & CSS schon ganz gut auskenne.
+                            JavaScript ist noch etwas neu für mich, aber ich lerne schnell.
+                        </p>
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Java</span>
+                            <span>SQL</span>
+                        </div>
+                        <span class="flip-hint">🔄 Klick zum Umdrehen</span>
+                    </div>
                 </div>
-                <div class="card-inhalt">
-                    <p class="card-kategorie">PERSÖNLICHE DATEN</p>
-                    <h2>Profil</h2>
-                    <ul class="profil-liste">
-                        <li><strong>Name:</strong> Tobias Stritzki</li>
-                        <li><strong>Alter:</strong> 20 Jahre</li>
-                        <li><strong>Wohnort:</strong> Wien, Österreich</li>
-                        <li><strong>Gaming-Name:</strong> _CodeBlack_</li>
-                    </ul>
+                <div class="card-back">
+                    <div class="content">
+                        <span class="label">ERFAHRUNGSLEVEL</span>
+                        <h2>Mein Können</h2>
+                        <p><strong>HTML & CSS:</strong> Fortgeschritten ⭐⭐⭐⭐</p>
+                        <p><strong>JavaScript:</strong> Lernend ⭐⭐⭐</p>
+                        <p><strong>Java:</strong> Grundkenntnisse ⭐⭐⭐</p>
+                        <p><strong>SQL:</strong> Grundkenntnisse ⭐⭐</p>
+                        <p style="margin-top: 15px; font-size: 13px; color: #888;">
+                            Ich habe schon einige coole Sachen damit gemacht und arbeite täglich an neuen Projekten!
+                        </p>
+                        <span class="flip-hint">🔄 Zurück</span>
+                    </div>
                 </div>
             </div>
+        </label>
 
-        </div>
+        <!-- Profil Card -->
+        <input type="checkbox" id="flip-profil" class="flip-checkbox">
+        <label for="flip-profil" class="card flip-card" id="profil">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Profile">
+                    <div class="content">
+                        <span class="label">PERSÖNLICHE DATEN</span>
+                        <h2>Profil</h2>
+                        <ul>
+                            <li><strong>Name:</strong> Tobias Stritzki</li>
+                            <li><strong>Alter:</strong> 20 Jahre</li>
+                            <li><strong>Wohnort:</strong> Wien, Österreich</li>
+                            <li><strong>Gaming-Name:</strong> _CodeBlack_</li>
+                        </ul>
+                        <span class="flip-hint">🔄 Klick zum Umdrehen</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="content">
+                        <span class="label">MOTTO</span>
+                        <h2>Über mich</h2>
+                        <p style="font-size: 16px; font-style: italic; color: #555; margin: 20px 0;">
+                            "Der beste Weg, die Zukunft vorherzusagen, ist, sie zu gestalten."
+                        </p>
+                        <p>
+                            🎓 Student an der Spengergasse<br>
+                            💻 Leidenschaftlicher Coder<br>
+                            🎮 Gamer & Tech-Enthusiast<br>
+                            📈 Interessiert an Finance
+                        </p>
+                        <span class="flip-hint">🔄 Zurück</span>
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Projekte Card -->
+        <input type="checkbox" id="flip-projekte" class="flip-checkbox">
+        <label for="flip-projekte" class="card flip-card" id="projekte">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Projects">
+                    <div class="content">
+                        <span class="label">PORTFOLIO</span>
+                        <h2>Projekte</h2>
+                        <p>
+                            Hier eine Auswahl meiner bisherigen Projekte. Von einfachen Webseiten bis hin zu komplexeren Anwendungen.
+                        </p>
+                        <div class="tags">
+                            <span>Landing Pages</span>
+                            <span>Web Apps</span>
+                            <span>Responsive Design</span>
+                        </div>
+                        <span class="flip-hint">🔄 Klick zum Umdrehen</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="content">
+                        <span class="label">AKTUELLE PROJEKTE</span>
+                        <h2>Was ich baue</h2>
+                        <p><strong>Portfolio Website:</strong> Diese Seite hier! 🎨</p>
+                        <p><strong>Trading Dashboard:</strong> Visualisierung von Krypto-Kursen</p>
+                        <p><strong>Gaming Tracker:</strong> Stats und Achievements Tracker</p>
+                        <p style="margin-top: 15px; font-size: 13px; color: #888;">
+                            Mehr Projekte findest du auf meinem GitHub!
+                        </p>
+                        <span class="flip-hint">🔄 Zurück</span>
+                    </div>
+                </div>
+            </div>
+        </label>
+
+        <!-- Hobbies Card -->
+        <input type="checkbox" id="flip-hobbies" class="flip-checkbox">
+        <label for="flip-hobbies" class="card flip-card" id="hobbies">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?crop=entropy&cs=srgb&fm=jpg&q=85" alt="Gaming">
+                    <div class="content">
+                        <span class="label">FREIZEIT</span>
+                        <h2>Hobbies</h2>
+                        <p>
+                            Wenn ich nicht gerade code, zocke ich leidenschaftlich gern oder beschäftige mich mit den neuesten Tech-Trends.
+                        </p>
+                        <div class="tags">
+                            <span>Gaming</span>
+                            <span>Tech News</span>
+                            <span>Fitness</span>
+                        </div>
+                        <span class="flip-hint">🔄 Klick zum Umdrehen</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="content">
+                        <span class="label">GAMING SETUP</span>
+                        <h2>Meine Games</h2>
+                        <p>🎮 <strong>Lieblingsgames:</strong> CS2, Valorant, League of Legends</p>
+                        <p>⚡ <strong>Genre:</strong> FPS, MOBA, Strategy</p>
+                        <p>🏆 <strong>Achievements:</strong> Diamond Rank in mehreren Games</p>
+                        <p style="margin-top: 15px; font-size: 13px; color: #888;">
+                            Als _CodeBlack_ immer bereit für eine Runde!
+                        </p>
+                        <span class="flip-hint">🔄 Zurück</span>
+                    </div>
+                </div>
+            </div>
+        </label>
     </main>
+    
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <h2>Mein Werdegang</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2024 - Heute</h3>
+                    <h4>Fortgeschrittene Webentwicklung</h4>
+                    <p>Vertiefung in moderne Frameworks und komplexe Webanwendungen. Ständige Weiterentwicklung meiner Skills.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2020 - 2024</h3>
+                    <h4>Intensive Coding-Phase</h4>
+                    <p>Aufbau solider Kenntnisse in HTML, CSS, JavaScript, Java und SQL durch diverse Projekte und praktische Anwendung.</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2019</h3>
+                    <h4>Der Anfang</h4>
+                    <p>Erste Berührung mit Webentwicklung und Programmierung. Die Faszination war sofort da.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <footer>
-        <section>
-            <h2>Kontakt</h2>
-            <p>📧 Email: <a href="mailto:str240648@spengergasse.at">str240648@spengergasse.at</a></p>
-            <p>💼 Github: <a href="https://github.com/STTobias">STTobias</a></p>
-        </section>
+        <h2>Kontakt</h2>
+        <p>📧 Email: <a href="mailto:str240648@spengergasse.at">str240648@spengergasse.at</a></p>
+        <p>💼 Github: <a href="https://github.com/STTobias">STTobias</a></p>
     </footer>
 </body>
 
