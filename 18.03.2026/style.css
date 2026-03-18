@@ -1,0 +1,19 @@
+body {
+    place-items: center;
+}
+
+body h1:first-child {
+    font-size: 3em;
+}
+
+img {
+    width: 800px;
+
+}
+
+div>div {
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    font-size: 1.5em;
+}
