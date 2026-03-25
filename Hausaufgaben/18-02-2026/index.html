@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taschenrechner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Taschenrechner</h1>
+
+    <div id="rechner">
+        <input type="number" id="zahl1" placeholder="Zahl 1">
+        <input type="number" id="zahl2" placeholder="Zahl 2">
+
+        <div id="buttons">
+            <button onclick="addieren()">+</button>
+            <button onclick="subtrahieren()">-</button>
+            <button onclick="multiplizieren()">×</button>
+            <button onclick="dividieren()">÷</button>
+        </div>
+
+        <div id="ergebnis">Ergebnis: <strong></strong></div>
+    </div>
+
+</body>
+
+</html>
